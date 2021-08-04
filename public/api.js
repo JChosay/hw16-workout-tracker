@@ -6,9 +6,9 @@ const API = {
     } catch (err) {
       console.log(err)
     }
-    const json = await res.json();
+    const json = await res.json(); //! array of all workouts is returned
 
-    return json[json.length - 1];
+    return json[json.length - 1]; //! grabs most recent workout
   },
   async addExercise(data) {
     const id = location.search.split("=")[1];
